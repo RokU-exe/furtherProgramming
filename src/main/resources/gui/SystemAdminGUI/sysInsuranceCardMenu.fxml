@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #CDE8E5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SystemAdminController">
+    <children>
+        <ImageView fitHeight="88.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="https://1000logos.net/wp-content/uploads/2019/07/RMIT-Logo.png" />
+            </image>
+        </ImageView>
+        <ImageView blendMode="MULTIPLY" fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="https://tse1.mm.bing.net/th?id=OIP.QqEXi7j5Z0ZMFu8pLgTxzAHaHa&amp;pid=Api&amp;P=0&amp;h=180" />
+            </image>
+            <effect>
+                <Blend opacity="0.96" />
+            </effect>
+        </ImageView>
+        <Button fx:id="addIc" layoutX="36.0" layoutY="101.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="214.0" text="Create new Insurance Card" onAction="#initializeUIComponents">
+            <font>
+                <Font name="Calibri" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="read" layoutX="355.0" layoutY="101.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="214.0" text="Read Insurance Card" onAction="#readInsuranceCard">
+            <font>
+                <Font name="Calibri" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="update" layoutX="36.0" layoutY="240.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="214.0" text="Update Insurance Card" onAction="#updateIC">
+            <font>
+                <Font name="Calibri" size="14.0" />
+            </font>
+        </Button>
+        <Button layoutX="355.0" layoutY="240.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="214.0" text=" Delete Insurance Card">
+            <font>
+                <Font name="Calibri" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="back" layoutX="525.0" layoutY="5.0" mnemonicParsing="false" text="Back to Dashboard" onAction="#backtoDashboard">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

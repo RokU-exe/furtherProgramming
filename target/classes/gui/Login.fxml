@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="373.0" prefWidth="497.0" style="-fx-background-color: #CDE8E5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginController">
+   <ImageView fitHeight="88.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true">
+    <image>
+        <Image url="https://1000logos.net/wp-content/uploads/2019/07/RMIT-Logo.png" />
+    </image>
+    </ImageView>
+    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="118.0" prefWidth="497.0" style="-fx-background-color: #CDE8E5;" text="INSURANCE CLAIMS MANAGEMENT SYSTEM">
+      <font>
+         <Font name="Calibri Bold" size="24.0" />
+      </font></Label>
+    <HBox alignment="CENTER" spacing="10">
+        <Label alignment="TOP_LEFT" prefHeight="17.0" prefWidth="75.0" text="Email:">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+        <TextField fx:id="emailField" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="225.0" />
+      <VBox.margin>
+         <Insets bottom="10.0" />
+      </VBox.margin>
+    </HBox>
+    <HBox alignment="CENTER" spacing="10">
+        <Label prefHeight="17.0" prefWidth="75.0" text="Password:">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+        <PasswordField fx:id="passwordField" prefHeight="25.0" prefWidth="225.0" />
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+    </HBox>
+    <Button fx:id="loginButton" contentDisplay="CENTER" onAction="#handleLogin" prefHeight="25.0" prefWidth="134.0" style="-fx-alignment: CENTER; -fx-background-color: #4D869C;" text="Login" textAlignment="CENTER" textFill="WHITE">
+      <VBox.margin>
+         <Insets top="20.0" />
+      </VBox.margin></Button>
+</VBox>

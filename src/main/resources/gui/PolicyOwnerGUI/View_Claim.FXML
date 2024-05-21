@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/22-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PolicyOwnerController">
+    <TableView fx:id="claimsTableView">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID"/>
+            <TableColumn fx:id="claimDateColumn" text="Claim Date"/>
+            <TableColumn fx:id="insuredPersonColumn" text="Insured Person"/>
+            <TableColumn fx:id="cardNumberColumn" text="Card Number"/>
+            <TableColumn fx:id="examDateColumn" text="Exam Date"/>
+            <TableColumn fx:id="documentsColumn" text="Documents"/>
+            <TableColumn fx:id="claimAmountColumn" text="Claim Amount"/>
+            <TableColumn fx:id="statusColumn" text="Status"/>
+            <TableColumn fx:id="receiverBankColumn" text="Receiver Bank"/>
+            <TableColumn fx:id="receiverNameColumn" text="Receivcer Name"/>
+            <TableColumn fx:id="receiverNumberColumn" text="Receiver Number"/>
+            <TableColumn fx:id="policyHolderNameColumn" text="Policy Holder Name"/>
+        </columns>
+    </TableView>
+</VBox>

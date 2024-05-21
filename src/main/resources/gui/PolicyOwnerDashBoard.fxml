@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PolicyOwnerController">
+    <children>
+        <ImageView fitHeight="88.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="https://1000logos.net/wp-content/uploads/2019/07/RMIT-Logo.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="55.0" layoutY="247.0" text="Manage Beneficiaries">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+
+        <Label layoutX="55.0" layoutY="102.0" text="Manage Claims">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+      <Button fx:id="beneficiary_menu_button" layoutX="418.0" layoutY="257.0" mnemonicParsing="false" onAction="#beneficiary_Menu" text="bene" />
+      <Button layoutX="417.0" layoutY="112.0" mnemonicParsing="false" text="Enter" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #CDE8E5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ManagerController">
+   <children>
+      <Label alignment="CENTER" layoutX="150.0" layoutY="20.0" prefHeight="82.0" prefWidth="500.0" text="INSURANCE MANAGER DASHBOARD">
+         <font>
+            <Font name="Calibri Bold" size="27.0" />
+         </font>
+      </Label>
+      <VBox layoutX="20.0" layoutY="125.0" spacing="10.0">
+         <Button mnemonicParsing="false" onAction="#handleViewClaims" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4D869C;" text="View Claims" textFill="WHITE" />
+         <Button mnemonicParsing="false" onAction="#handleViewCustomers" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4D869C;" text="View Customers" textFill="WHITE" />
+         <Button mnemonicParsing="false" onAction="#handleViewSurveyors" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4D869C;" text="View Surveyors" textFill="WHITE" />
+         <Button mnemonicParsing="false" onAction="#handleApproveClaim" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4D869C;" text="Approve Claim" textFill="WHITE" />
+         <Button mnemonicParsing="false" onAction="#handleRejectClaim" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4D869C;" text="Reject Claim" textFill="WHITE" />
+         <Button fx:id="navigateButton" mnemonicParsing="false" onAction="#handleExamineClaims" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4D869C;" text="Examine Claims" textFill="WHITE" />
+         <Button mnemonicParsing="false" onAction="#handleRetrieveUser" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4D869C;" text="Retrieve User" textFill="WHITE" />
+         <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogout" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4D869C;" text="Logout" textFill="WHITE" />
+      </VBox>
+      <Label layoutX="260.0" layoutY="125.0" text="Content Area:" textFill="#1b1a1a">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <VBox fx:id="contentArea" layoutX="260.0" layoutY="160.0" prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <Label fx:id="contentLabel" text="Content will be displayed here" textFill="#1b1a1a" />
+         </children>
+      </VBox>
+      <TableView fx:id="claimsTable" layoutX="260.0" layoutY="370.0" prefHeight="200.0" prefWidth="500.0">
+         <columns>
+            <TableColumn fx:id="claimIdColumn" text="Claim ID" />
+            <TableColumn fx:id="insuredPersonColumn" text="Insured Person" />
+            <TableColumn fx:id="statusColumn" text="Status" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="68.0" fitWidth="149.0" layoutX="6.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <Image url="https://1000logos.net/wp-content/uploads/2019/07/RMIT-Logo.png" />
+      </ImageView>
+   </children>
+</AnchorPane>

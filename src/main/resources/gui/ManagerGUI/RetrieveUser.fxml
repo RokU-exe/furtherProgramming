@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.RetrieveUserController" prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label layoutX="20.0" layoutY="20.0" text="Retrieve User Information"/>
+        <Label layoutX="20.0" layoutY="60.0" text="User ID:"/>
+        <TextField fx:id="userIdField" layoutX="80.0" layoutY="60.0" prefWidth="200.0"/>
+        <Button layoutX="300.0" layoutY="60.0" mnemonicParsing="false" text="Retrieve" onAction="#handleRetrieveUser"/>
+        <Label layoutX="20.0" layoutY="100.0" text="User Information:"/>
+        <TextArea fx:id="userInfoArea" layoutX="20.0" layoutY="130.0" prefHeight="200.0" prefWidth="560.0" wrapText="true"/>
+        <Button fx:id="backButton" layoutX="380.0" layoutY="360.0" mnemonicParsing="false" text="Back" onAction="#handleBack"/>
+        <Button fx:id="logoutButton" layoutX="480.0" layoutY="360.0" mnemonicParsing="false" text="Logout" onAction="#handleLogout"/>
+    </children>
+</AnchorPane>

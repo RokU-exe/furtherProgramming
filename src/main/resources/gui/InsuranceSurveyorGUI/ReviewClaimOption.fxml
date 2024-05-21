@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="373.0" prefWidth="497.0" style="-fx-background-color: #CDE8E5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.InsuranceSurveyorController">
+   <children>
+      <ImageView fitHeight="88.0" fitWidth="286.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="https://1000logos.net/wp-content/uploads/2019/07/RMIT-Logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="75.0" prefHeight="118.0" prefWidth="497.0" style="-fx-background-color: #CDE8E5;" text="Review Claim Options Dashboard">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font></Label>
+      <Button fx:id="requireMoreClaimInformation" layoutX="160.0" layoutY="248.0" mnemonicParsing="false" onAction="#requireMoreClaimInformation" text="Require more information" />
+      <Button fx:id="proposeClaimToManager" layoutX="177.0" layoutY="193.0" mnemonicParsing="false" onAction="#proposeClaimToManager" text="Propose to Manager" />
+      <Button fx:id="proposeClaimToManager1" layoutX="118.0" layoutY="306.0" mnemonicParsing="false" onAction="#proposeClaimToManager" text="Back To Insurance Surveyor Dashboard" />
+   </children>
+</AnchorPane>

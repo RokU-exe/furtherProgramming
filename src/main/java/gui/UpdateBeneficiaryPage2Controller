@@ -1,0 +1,126 @@
+package gui;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import models.User;
+import models.UserRole;
+import utils.DBUtil;
+
+import java.io.IOException;
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
+
+public class UpdateBeneficiaryPage2Controller implements Initializable {
+    @FXML
+    private TextField fullNameField;
+
+    @FXML
+    private TextField emailField;
+
+    @FXML
+    private TextField passwordField;
+
+    @FXML
+    private TextField role;
+
+    private User user = new User(); // This will hold the user information passed from Page 1
+    @FXML
+    private TextField back;
+
+    public void backtoDashboard() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/SystemAdminGUI/systemAdminDashboard.fxml"));
+            Parent adminDashboardRoot = loader.load();
+
+            Node sourceNode = back; // Use any node from the current scene
+
+            // Get the primary stage from the source node's scene
+            Stage primaryStage = (Stage) sourceNode.getScene().getWindow();
+
+            primaryStage.setScene(new Scene(adminDashboardRoot));
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle any errors loading the admin dashboard FXML
+        }
+    }
+
+    public void initData(String userID) {
+        // Use the user ID as needed in this controller
+        // For example, you can set it to a text field
+        fullNameField.setText(userID); // Assuming you have a TextField named userIDTextField
+    }
+
+    @FXML
+    private Button done_Updating;
+
+    @FXML
+    public void updateUser(ActionEvent event) throws SQLException {
+        // Retrieve updated user information from UI fields
+        String newFullName = fullNameField.getText();
+        String newEmail = emailField.getText();
+        String newPassword = passwordField.getText();
+        String newRole = role.getText();
+        // Update user object with new information
+        user.setFullName(newFullName);
+        user.setEmail(newEmail);
+        user.setPassword(newPassword);
+        user.setRole(UserRole.valueOf(newRole));
+
+        // Call method to update user information in the database
+        DBUtil. PO_updateUser(user);
+        showAlert(Alert.AlertType.INFORMATION, "Update Successful", "User information updated successfully.");
+
+        // Call the method associated with the done_Updating button
+        doneUpdatingAction();
+    }
+
+    // Method associated with the done_Updating button
+    @FXML
+    public void doneUpdatingAction() {
+        try {
+            // Load the FXML file for the system admin dashboard
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/SystemAdminGUI/systemAdminDashboard.fxml"));
+            Parent adminDashboardRoot = loader.load();
+
+            // Get the current scene's source node
+            Node sourceNode = done_Updating;
+
+            // Get the primary stage from the source node's scene
+            Stage primaryStage = (Stage) sourceNode.getScene().getWindow();
+
+            // Set the scene to the system admin dashboard
+            primaryStage.setScene(new Scene(adminDashboardRoot));
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle any errors loading the admin dashboard FXML
+        }
+    }
+
+
+    // Method to show an alert dialog
+    private void showAlert(Alert.AlertType alertType, String title, String content) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        
+    }
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #CDE8E5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PolicyOwnerController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="128.0" prefHeight="118.0" prefWidth="497.0" style="-fx-background-color: #CDE8E5;" text="UPDATE NEW BENEFICIARY">
+            <font>
+                <Font name="Calibri" size="24.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="88.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="https://1000logos.net/wp-content/uploads/2019/07/RMIT-Logo.png" />
+            </image>
+        </ImageView>
+        <ImageView blendMode="MULTIPLY" fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="https://tse1.mm.bing.net/th?id=OIP.QqEXi7j5Z0ZMFu8pLgTxzAHaHa&amp;pid=Api&amp;P=0&amp;h=180" />
+            </image>
+            <effect>
+                <Blend opacity="0.96" />
+            </effect>
+        </ImageView>
+        <Button fx:id="back" layoutX="525.0" layoutY="5.0" mnemonicParsing="false" onAction="#backtoDashboard" text="Back to Dashboard">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <TextField fx:id="userID" layoutX="181.0" layoutY="191.0" />
+        <Label layoutX="63.0" layoutY="192.0" text="ID:">
+            <font>
+                <Font name="Calibri" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="find_Updated_Beneficiary_button" layoutX="451.0" layoutY="180.0" mnemonicParsing="false" onAction="#find_updated_beneficiary_Page2" prefHeight="47.0" prefWidth="106.0" text="FIND">
+            <font>
+                <Font name="Calibri" size="18.0" />
+            </font>
+        </Button>
+      <Label layoutX="41.0" layoutY="142.0" text="Enter required ID of the updated user">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+    </children>
+</AnchorPane>

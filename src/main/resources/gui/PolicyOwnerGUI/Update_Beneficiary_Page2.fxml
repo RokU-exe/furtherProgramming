@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #CDE8E5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.UpdateBeneficiaryPage2Controller">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="128.0" prefHeight="118.0" prefWidth="497.0" style="-fx-background-color: #CDE8E5;" text="UPDATE BENEFICIARY">
+            <font>
+                <Font name="Calibri" size="24.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="88.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="https://1000logos.net/wp-content/uploads/2019/07/RMIT-Logo.png" />
+            </image>
+        </ImageView>
+        <ImageView blendMode="MULTIPLY" fitHeight="150.0" fitWidth="200.0" layoutX="450.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="https://tse1.mm.bing.net/th?id=OIP.QqEXi7j5Z0ZMFu8pLgTxzAHaHa&amp;pid=Api&amp;P=0&amp;h=180" />
+            </image>
+            <effect>
+                <Blend opacity="0.96" />
+            </effect>
+        </ImageView>
+<!--        <Button fx:id="back" layoutX="525.0" layoutY="5.0" mnemonicParsing="false" onAction="#backtoDashboard" text="Back to Dashboard">-->
+<!--            <font>-->
+<!--                <Font size="14.0" />-->
+<!--            </font>-->
+<!--        </Button>-->
+        <TextField fx:id="fullNameField" layoutX="227.0" layoutY="111.0" />
+        <Label layoutX="91.0" layoutY="180.0" text="New Email:">
+            <font>
+                <Font name="Calibri" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="emailField" layoutX="227.0" layoutY="175.0" />
+        <Label layoutX="95.0" layoutY="242.0" text="New Password: ">
+            <font>
+                <Font name="Calibri" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="passwordField" layoutX="227.0" layoutY="240.0" />
+        <Button fx:id="done_Updating" layoutX="502.0" layoutY="168.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="47.0" prefWidth="106.0" text="UPDATE">
+            <font>
+                <Font name="Calibri" size="18.0" />
+            </font>
+        </Button>
+      <Label layoutX="94.0" layoutY="110.0" text="New Full Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="304.0" text="New Role: ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="role" layoutX="227.0" layoutY="305.0" />
+    </children>
+
+</AnchorPane>
