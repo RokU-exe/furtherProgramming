@@ -21,7 +21,7 @@ public class DBUtil {
     // Get Claims for Policy Holder
     public static List<Claim> getClaimsForPolicyHolder(String policyHolderName) throws SQLException {
         List<Claim> claims = new ArrayList<>();
-        String sql = "SELECT * FROM claims WHERE policyHolder_name = ?";
+        String sql = "SELECT * FROM claims WHERE 'policyHolder_name' = ?";
 
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
