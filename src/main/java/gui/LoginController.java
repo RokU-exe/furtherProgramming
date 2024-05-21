@@ -92,7 +92,11 @@ public class LoginController {
 //                    PolicyOwnerController controller = new PolicyOwnerController(po);
 //                    controller.openPolicyOwnerDashboard(getLoginButton());
 //                }
-                case UserRole.INSURANCE_SURVEYOR -> {validShow();openSurveyorDashboard(user);}
+                case UserRole.INSURANCE_SURVEYOR -> {
+                    validShow();
+                    InsuranceSurveyorController controller = new InsuranceSurveyorController();
+                    controller.openSurveyorDashboard(getLoginButton());
+                }
                 case UserRole.INSURANCE_MANAGER ->{validShow(); openManagerDashboard(user);}
                 case UserRole.SYSTEM_ADMIN -> {
                     validShow();
