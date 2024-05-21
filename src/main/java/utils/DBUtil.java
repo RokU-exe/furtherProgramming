@@ -386,30 +386,11 @@ public class DBUtil {
         return surveyors;
     }
 
-    public static String getPrefixByUserRole(UserRole role) {
-        switch (role) {
-            case POLICY_HOLDER:
-                return "h";
-            case POLICY_OWNER:
-                return "o";
-            case INSURANCE_SURVEYOR:
-                return "s";
-            case INSURANCE_MANAGER:
-                return "m";
-            case DEPENDENT:
-                return "d";
-            case SYSTEM_ADMIN:
-                return "a";
-            default:
-                throw new IllegalArgumentException("Unknown role: " + role);
-        }
-    }
-
     public static String getLargestIdByUserRole(UserRole role) {
-        String prefix = getPrefixByUserRole(role);
-        String query = "SELECT MAX(CAST(SUBSTRING(id FROM LENGTH(?) + 1) AS INTEGER)) AS max_id " +
+        String prefix = "c";
+        String query = "SELECT MAX(CAST(SUBSTRING(id FROM LENGTH(?) + 2) AS INTEGER)) AS max_id " +
                 "FROM users " +
-                "WHERE role = ? AND SUBSTRING(id FROM LENGTH(?) + 1) ~ '^[0-9]+$'";
+                "WHERE role = ? AND SUBSTRING(id FROM LENGTH(?) + 2) ~ '^[0-9]+$'";
         try (Connection conn = getConnection();
              PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setString(1, prefix);
@@ -427,15 +408,14 @@ public class DBUtil {
             }
             // Increment the numeric part of the ID
             maxId++;
-            // Format the new ID with the prefix and zero-padded numeric part
-            String largestId = String.format("%s%02d", prefix, maxId);
+            // Format the new ID with the prefix 'c-' and zero-padded numeric part (7 digits)
+            String largestId = String.format("%s-%07d", prefix, maxId);
             return largestId;
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
     }
-
     public static String generateUniqueRandomCardNumber() {
         int numRetries = 0; // Track retry attempts
         int maxRetries = 10; // Set a maximum number of retries (optional)
